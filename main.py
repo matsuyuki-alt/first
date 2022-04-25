@@ -44,8 +44,8 @@ for s in range(100): # 100回繰り返す
 
     print("◆" + str(s) + "秒目◆", file=file)
     print("◇速度", file=file)
-    pprint(speed, stream=file, compact=True, width=200)
+    pprint(speed, stream=file, compact=True, width=1000)
     print("◇距離", file=file)
-    pprint(kyori, stream=file, compact=True, width=200)
+    pprint(kyori, stream=file, compact=True, width=1000)
 
 file.close()
