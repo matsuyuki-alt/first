@@ -37,15 +37,15 @@ for s in range(100): # 100回繰り返す
                 speed[carno] -= 1
             elif status2[carno] == -1:
                 speed[carno] += 1
-            if kyori[carno] - (kyori[carno] - 1) < 25: # もし車間距離が25m未満なら
+            if kyori[carno] - (kyori[carno] - 1) < 10: # もし車間距離が10m未満なら
                 status2[carno] = 1
-            elif kyori[carno] - (kyori[carno] - 1) > 30: # もし 車間距離が30mより大きい なら
+            elif kyori[carno] - (kyori[carno] - 1) > 15: # もし 車間距離が15mより大きい なら
                 status2[carno] = -1
 
     print("◆" + str(s) + "秒目◆", file=file)
     print("◇速度", file=file)
-    pprint(speed, stream=file)
+    pprint(speed, stream=file, compact=True, width=200)
     print("◇距離", file=file)
-    pprint(kyori, stream=file)
+    pprint(kyori, stream=file, compact=True, width=200)
 
 file.close()
