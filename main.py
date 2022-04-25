@@ -14,7 +14,7 @@ status1 = [0]  # 坂を上がったかどうかのステータス 0開始まえ 
 status2 = [0]  # 車間距離が少なくなっているかのステータス -1広すぎ 0ちょうど 1狭すぎ
 for i in range(kurumanodaisuu - 1): # 車を50台分登録
     speed.append(20)
-    kyori.append((i * kurumanodaisuu) - (i * 10))
+    kyori.append((12 * kurumanodaisuu) - (i * 12))
     status1.append(0)
     status2.append(0)
 
