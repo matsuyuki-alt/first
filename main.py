@@ -7,8 +7,8 @@ file2 = open("log2.txt", "a", encoding="UTF-8")
 file2.write("--- 実行 ---")
 
 # const
-sakanobasyo = 2500
-kurumanodaisuu = 200
+sakanobasyo = 1500
+kurumanodaisuu = 75
 
 # 初期化
 speed = [20]  # 20m/s = 72km/h
@@ -65,11 +65,8 @@ for s in range(500): # 500回繰り返す
     pprint(speed, stream=file, compact=True, width=1000)
     print("◇距離", file=file)
     pprint(kyori, stream=file, compact=True, width=1000)
-    if s % 10 == 0:
+    if (s + 1) % 10 == 0:
         print("◆" + str(s + 1) + "秒目◆", file=file2)
-        print("◇速度", file=file2)
         pprint(speed, stream=file2, compact=True, width=1000)
-        print("◇距離", file=file2)
-        pprint(kyori, stream=file2, compact=True, width=1000)
 
 file.close()
